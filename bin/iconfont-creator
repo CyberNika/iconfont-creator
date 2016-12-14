@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const chalk = require('chalk');
+
+const helpText = require('../config/help');
+
+program
+  .version(require('../package').version)
+  .usage('<command> [options]')
+  .command('sketch <sketch-file-path> [-o <output-path>]', 'create SVGs or(and) Iconfont from a Sketch file')
+  .command('svg', 'create Iconfont from SVG files')
+  .on('--help', () => {
+    console.log(chalk.yellow.bold('  Examples:'));
+    console.log('');
+    console.log(chalk.yellow.bold(`    $ ${helpText.sketch}`));
+    console.log(chalk.yellow.bold(`    $ ${helpText.svg}`));
+    console.log(chalk.yellow.bold('    $ iconfont-creator --help'));
+    console.log('');
+  })
+  .parse(process.argv);

@@ -1,0 +1,38 @@
+{
+  "name": "iconfont-creator",
+  "version": "0.0.1",
+  "description": "A simply CLI tool to create Iconfont from Sketch or SVGs.",
+  "preferGlobal": true,
+  "keywords": [
+    "iconfont",
+    "sketch",
+    "svg",
+    "react-native"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start": "./bin/iconfont-creator",
+    "lint": "eslint bin/* lib/*.js --fix"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "author": "flyow",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PuYart/iconfont-creator.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "iconfont-builder": "^2.3.2",
+    "sketch-tool": "^1.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.1",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^1.10.3",
+    "pre-commit": "^1.2.2"
+  }
+}
