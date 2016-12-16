@@ -20,11 +20,11 @@ const initHelp = () => {
 
 program
   .usage('<sketch-file-path>')
-  .option('-o, --output [output-path]', 'Iconfont created path, default dist in current directory')
-  .option('-t, --type [slices-or-artboards]', 'According to what for Sketch to export SVGs, slices(default) or artboards')
-  .option('-c, --clear', 'Clear output directory before create')
+  .option('-o, --output [output-path]', 'iconfont created path, default dist in current directory')
+  .option('-t, --type [slices-or-artboards]', 'according to what for Sketch to export SVGs, slices(default) or artboards')
+  .option('-c, --clear', 'clear output directory before create')
   .action(file => {
-    filePath = path.resolve(CWD, file);
+    filePath = file ? path.resolve(CWD, file) : null;
   })
   .on('--help', initHelp)
   .parse(process.argv);
@@ -33,20 +33,27 @@ if (!filePath) {
   program.help();
   process.exit(1);
 } else if (!exists(filePath)) {
-  console.log(chalk.red.bold('  The file does not exist'));
+  console.log(chalk.red.bold('  the file does not exist'));
   console.log();
   process.exit(1);
 } else if (program.type && ['slices', 'artboards'].indexOf(program.type) === -1) {
-  console.log(chalk.red.bold('  The param should be slices or artboards'));
+  console.log(chalk.red.bold('  the type(-t) param should be slices or artboards'));
   console.log();
   process.exit(1);
 }
 
 const params = {
   file: filePath,
-  output: path.resolve(CWD, program.output || './dist'),
+  output: path.resolve(CWD, program.output || 'dist'),
   type: program.type || 'slices',
   clear: program.clear,
 };
 
-utils.exportFiles(params);
+utils.exportFiles(params).then(() => {
+  utils.exportIconfont({
+    src: params.output,
+    output: path.resolve(params.output, 'fonts'),
+  }).then(() => {
+    console.log('👌  iconfont exports succeed');
+  });
+});

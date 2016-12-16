@@ -152,11 +152,15 @@ circular-json@^0.3.0:
   version "0.3.1"
   resolved "http://r.cnpmjs.org/circular-json/download/circular-json-0.3.1.tgz#be8b36aefccde8b3ca7aa2d6afc07a37242c0d2d"
 
-cli-cursor@^1.0.1:
+cli-cursor@^1.0.1, cli-cursor@^1.0.2:
   version "1.0.2"
   resolved "http://r.cnpmjs.org/cli-cursor/download/cli-cursor-1.0.2.tgz#64da3f7d56a54412e59794bd62dc35295e8f2987"
   dependencies:
     restore-cursor "^1.0.1"
+
+cli-spinners@^0.2.0:
+  version "0.2.0"
+  resolved "http://r.cnpmjs.org/cli-spinners/download/cli-spinners-0.2.0.tgz#85078737913b880f6ec9ffe7b65e83ec7776284f"
 
 cli-width@^2.0.0:
   version "2.1.0"
@@ -727,6 +731,12 @@ lodash@^4.0.0, lodash@^4.14.2, lodash@^4.3.0:
   version "2.1.0"
   resolved "http://r.cnpmjs.org/lodash/download/lodash-2.1.0.tgz#0637eaaa36a8a1cfc865c3adfb942189bfb0998d"
 
+log-symbols@^1.0.2:
+  version "1.0.2"
+  resolved "http://r.cnpmjs.org/log-symbols/download/log-symbols-1.0.2.tgz#376ff7b58ea3086a0f09facc74617eca501e1a18"
+  dependencies:
+    chalk "^1.0.0"
+
 longest@^1.0.1:
   version "1.0.1"
   resolved "http://r.cnpmjs.org/longest/download/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
@@ -801,6 +811,15 @@ optionator@^0.8.2:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
     wordwrap "~1.0.0"
+
+ora@^0.3.0:
+  version "0.3.0"
+  resolved "http://r.cnpmjs.org/ora/download/ora-0.3.0.tgz#367a078ad25cfb096da501115eb5b401e07d7495"
+  dependencies:
+    chalk "^1.1.1"
+    cli-cursor "^1.0.2"
+    cli-spinners "^0.2.0"
+    log-symbols "^1.0.2"
 
 os-homedir@^1.0.0:
   version "1.0.2"

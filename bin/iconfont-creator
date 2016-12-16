@@ -8,7 +8,7 @@ const helpText = require('../config/help');
 program
   .version(require('../package').version)
   .usage('<command> [options]')
-  .command('sketch <sketch-file-path> [-o <output-path>]', 'create SVGs or(and) Iconfont from a Sketch file')
+  .command('sketch', 'create SVGs or(and) Iconfont from a Sketch file')
   .command('svg', 'create Iconfont from SVG files')
   .on('--help', () => {
     console.log(chalk.yellow.bold('  Examples:'));

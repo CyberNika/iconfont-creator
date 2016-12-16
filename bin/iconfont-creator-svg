@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const path = require('path');
+const fs = require('fs');
+const chalk = require('chalk');
+const CWD = process.cwd();
+
+const exists = fs.existsSync;
+const utils = require('../lib');
+const helpText = require('../config/help');
+
+let filesDir;
+
+const initHelp = () => {
+  console.log(chalk.yellow.bold('  Examples:'));
+  console.log();
+  console.log(chalk.yellow.bold(`    $ ${helpText.svg}`));
+  console.log();
+};
+
+program
+  .usage('<svg-directory>')
+  .option('-o, --output [output-path]', 'iconfont created path, default fonts in <svg-directory>')
+  .option('-c, --clear', 'clear output directory before create')
+  .action(dir => {
+    filesDir = dir ? path.resolve(CWD, dir) : null;
+  })
+  .on('--help', initHelp)
+  .parse(process.argv);
+
+if (!filesDir) {
+  program.help();
+  process.exit(1);
+} else if (!exists(filesDir) || !fs.statSync(filesDir).isDirectory()) {
+  console.log(chalk.red.bold('  should give a directory'));
+  console.log();
+  process.exit(1);
+}
+
+const params = {
+  src: filesDir,
+  output: program.output ? path.resolve(CWD, program.output) : path.resolve(filesDir, 'fonts'),
+  clear: program.clear,
+};
+
+utils.exportIconfont(params).then(() => {
+  console.log('👌  iconfont exports succeed');
+});

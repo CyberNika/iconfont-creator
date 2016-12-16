@@ -1,8 +1,11 @@
 {
   "name": "iconfont-creator",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A simply CLI tool to create Iconfont from Sketch or SVGs.",
   "preferGlobal": true,
+  "bin": {
+    "iconfont-creator": "bin/iconfont-creator"
+  },
   "keywords": [
     "iconfont",
     "sketch",
@@ -12,7 +15,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./bin/iconfont-creator",
-    "lint": "eslint bin/* lib/*.js --fix"
+    "lint": "eslint bin/* lib/*.js --fix || exit 0"
   },
   "pre-commit": [
     "lint"
@@ -20,13 +23,14 @@
   "author": "flyow",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PuYart/iconfont-creator.git"
+    "url": "git+https://github.com/flyow/iconfont-creator.git"
   },
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
     "iconfont-builder": "^2.3.2",
+    "ora": "^0.3.0",
     "sketch-tool": "^1.0.5"
   },
   "devDependencies": {
