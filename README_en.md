@@ -14,7 +14,7 @@ If prompt permissions are insufficient, please use `$ sudo npm install -g iconfo
 
 ## Usage
 
-### create Iconfont from a Sketch file
+### Create Iconfont from a Sketch file
 
 `$ iconfont-creator sketch <sketch-file-path> [-o [output-path]>] [-t [slices-or-artboards]] [-c]`
 
@@ -27,7 +27,7 @@ If prompt permissions are insufficient, please use `$ sudo npm install -g iconfo
 - `-c`
   - optional, clear output directory before create
 
-### create Iconfont from SVGs
+### Create Iconfont from SVGs
 
 `$ iconfont-creator svg <svg-directory> [-o <output-path>] [-c]`
 

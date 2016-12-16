@@ -1,12 +1,12 @@
 # iconfont-creator
 
-一个简单的从 Sketch 文件或 SVG 生成 Iconfont 和 Icon 组件 的 CLI 工具。
+一个简单的从 Sketch 文件或 SVG 生成 Iconfont 和 Icon 组件的 CLI 工具。
 
-[English(beta)](./README_en.md)
+[English ( beta )](./README_en.md)
 
 ## 安装
 
-此工具依赖 Node.js（>= 5.8.0, 4.x 应该也可以但并未进行测试 ）。
+此工具依赖 Node.js（>= 5.8.0，4.x 应该也可以但并未进行测试 ）。
 
 `$ npm install -g iconfont-creator`
 
