@@ -21,7 +21,7 @@ If prompt permissions are insufficient, please use `$ sudo npm install -g iconfo
 - `<sketch-file-path>`
   - required, Sketch file's directory
 - `-o [output-path]`
-  - optional, iconfont created path, default `dist` in current directory
+  - optional, iconfont created path, default `dist` in current directory. preview html file and css file will be created in `components` under this path.
 - `-t [slices-or-artboards]`
   - optional ( `slices` or `artboards` ), according to what for Sketch to export SVGs, `slices` (default) or `artboards`
 - `-c`
@@ -34,7 +34,7 @@ If prompt permissions are insufficient, please use `$ sudo npm install -g iconfo
 - `<svg-directory>`
   - SVG files' directory
 - `-o <output-path>`
-  - optional, iconfont created path, default `<svg-directory>/fonts`
+  - optional, iconfont created path, default `<svg-directory>/fonts`. preview html file and css file will be created in `components` under this path.
 - `-c`
   - optional, clear output directory before create
 

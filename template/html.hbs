@@ -10,8 +10,33 @@
         margin: 0;
         color: #555;
       }
+      h1 {
+        padding-bottom: 12px;
+        border-bottom: 1px solid #ccc;
+      }
       p {
         margin: 8px 0;
+      }
+      a {
+        color: #999;
+      }
+      a:hover {
+        color: #666;
+      }
+      pre {
+        padding: 15px;
+        border-radius: 6px;
+        background: #f7f7f7;
+        white-space: pre-line;
+        font-size: 14px;
+        color: #666;
+      }
+      pre code {
+        margin: 0;
+        border: none;
+        background: #f7f7f7;
+        overflow-x: auto;
+        font-family: monaco,menlo,consolas,courier new,courier,monospace;
       }
       main {
         margin-top: 20px;
@@ -20,10 +45,6 @@
         margin-top: 80px;
         text-align: center;
         color: #999;
-      }
-      header > h1 {
-        padding-bottom: 12px;
-        border-bottom: 1px solid #ccc;
       }
       .icon-list {
         padding-left: 0;
@@ -65,7 +86,7 @@
         <ul class="icon-list">
           {{#each icons}}
           <li class="icon-item">
-            <i class="icon iconfont icon-{{name}}"></i>
+            <i class="iconfont icon-{{name}} icon"></i>
             <p class="name">{{name}}</p>
             <p class="code">&amp;#x{{hexCode}};</p>
           </li>
@@ -74,12 +95,29 @@
       </section>
 
       <section class="help-section">
+        <h1>使用帮助</h1>
+        <h3>第一步：将 CSS 添加至 HTML 中</h3>
+        <pre>
+          <code>&lt;link rel="stylesheet" href="./iconfont.css"&gt;</code>
+        </pre>
+        <h3>第二步：查找相应图标的字体编码或 class，应用于页面</h3>
 
+        <h4>unicode 引用</h4>
+        <pre>
+          <code>&lt;i class="iconfont"&gt;&amp;#xf001;&lt;/i&gt;</code>
+        </pre>
+
+        <h4>class 引用</h4>
+        <pre>
+          <code>&lt;i class="iconfont icon-all-fill"&gt;&lt;/i&gt;</code>
+        </pre>
       </section>
     </main>
 
     <footer>
-      <p>created by iconfont-creator</p>
+      <p>
+        <a href="https://github.com/flyow/iconfont-creator" target="_blank">created by iconfont-creator</a>
+      </p>
     </footer>
   </body>
 </html>

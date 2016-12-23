@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
-const Promise = require('bluebird');
 const program = require('commander');
 const path = require('path');
 const exists = require('fs').existsSync;
 const chalk = require('chalk');
 const CWD = process.cwd();
 
-const Component = require('../lib/Component');
 const utils = require('../lib');
 const helpText = require('../config/help');
 
@@ -55,20 +53,7 @@ utils.exportFiles(params).then(() => {
   utils.exportIconfont({
     src: params.output,
     output: path.resolve(params.output, 'fonts'),
-  }).then(res => {
+  }).then(() => {
     console.log('👌  exports iconfont succeed');
-
-    const createComponent = new Component(res);
-    const actions = [
-      createComponent.createStyle(),
-      createComponent.createHtml(),
-    ];
-
-    Promise.all(actions).then(() => {
-      console.log('👌  all the Components created');
-    }).error(err => {
-      console.error(chalk.red.bold('☹️  Components created failed'));
-      console.error(chalk.red.bold(`    ${err.message}`));
-    });
   });
 });

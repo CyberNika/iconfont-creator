@@ -21,7 +21,7 @@
 - `<sketch-file-path>`
   - 必选参数，Sketch 文件的路径
 - `-o [output-path]`
-  - 选填参数，文件导出目录，默认为当前目录下的 `dist` 文件夹
+  - 选填参数，文件导出目录，默认为当前目录下的 `dist` 文件夹，默认会在当前目录下的 `components` 文件夹中生成 html 和 css 文件
 - `-t [slices-or-artboards]`
   - 选填参数（`slices` 或 `artboards`），依照切片或画板进行导出 SVG，默认为 `slices`
 - `-c`
@@ -34,7 +34,7 @@
 - `<svg-directory>`
   - SVG 文件的目录
 - `-o <output-path>`
-  - 选填参数，文件导出目录，默认为 `<svg-directory>/fonts`
+  - 选填参数，文件导出目录，默认为 `<svg-directory>/fonts`，默认会在当前目录下的 `components` 文件夹中生成 html 和 css 文件
 - `-c`
   - 选填参数，是否在生成 Iconfont 前清空导出目录
 
