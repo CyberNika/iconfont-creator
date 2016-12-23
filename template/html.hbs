@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>Iconfont</title>
+    <link rel="stylesheet" href="{{style}}">
+    <style>
+      body {
+        padding: 20px 40px;
+        margin: 0;
+        color: #555;
+      }
+      p {
+        margin: 8px 0;
+      }
+      main {
+        margin-top: 20px;
+      }
+      footer {
+        margin-top: 80px;
+        text-align: center;
+        color: #999;
+      }
+      header > h1 {
+        padding-bottom: 12px;
+        border-bottom: 1px solid #ccc;
+      }
+      .icon-list {
+        padding-left: 0;
+        margin-left: -8px;
+        list-style: none;
+      }
+      .icon-item {
+        display: inline-block;
+        margin: 8px;
+        width: 100px;
+        text-align: center;
+      }
+      .icon {
+        display: block;
+        font-size: 42px;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+      }
+      .icon:hover {
+        /*font-size: 50px;*/
+        transform: scale(1.5);
+      }
+      .name {
+        margin-top: 14px;
+        font-size: 12px;
+      }
+      .code {
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Iconfont</h1>
+    </header>
+
+    <main>
+      <section class="icon-section">
+        <ul class="icon-list">
+          {{#each icons}}
+          <li class="icon-item">
+            <i class="icon iconfont icon-{{name}}"></i>
+            <p class="name">{{name}}</p>
+            <p class="code">&amp;#x{{hexCode}};</p>
+          </li>
+          {{/each}}
+        </ul>
+      </section>
+
+      <section class="help-section">
+
+      </section>
+    </main>
+
+    <footer>
+      <p>created by iconfont-creator</p>
+    </footer>
+  </body>
+</html>
