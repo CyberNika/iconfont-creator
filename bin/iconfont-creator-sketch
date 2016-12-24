@@ -23,6 +23,7 @@ program
   .option('-o, --output [output-path]', 'iconfont created path, default dist in current directory')
   .option('-t, --type [slices-or-artboards]', 'according to what for Sketch to export SVGs, slices(default) or artboards')
   .option('-c, --clear', 'clear output directory before create')
+  .option('-m, --modules [components-divided-by-comma]', 'eg: -m vue,react-native,react. export Vue/React/React-Native Components, default all of them')
   .action(file => {
     filePath = file ? path.resolve(CWD, file) : null;
   })
@@ -53,6 +54,7 @@ utils.exportFiles(params).then(() => {
   utils.exportIconfont({
     src: params.output,
     output: path.resolve(params.output, 'fonts'),
+    modules:(program.modules || '').split(','),
   }).then(() => {
     console.log('👌  exports iconfont succeed');
   });

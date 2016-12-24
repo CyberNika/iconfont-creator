@@ -38,7 +38,14 @@
 - `-c`
   - 选填参数，是否在生成 Iconfont 前清空导出目录
 
+### 生成 Vue/React/React-Native 组件
+
+生成组件非常简单，只需在生成 Iconfont 时增加 `-m` 参数即可，参数值按逗号隔开，例如：
+
+`iconfont-creator sketch ./iconfont.sketch -m react-native,react`
+
+即可在 `<output-path>/components` 下生成 React-Native 和 React 组件。
+
 ### TODO
 
-- 添加 Icon 组件的生成
-- 合并 `sketch` 和 `svg` 命令
+- 添加解析在线 Iconfont 的功能

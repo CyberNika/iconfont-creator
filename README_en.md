@@ -2,6 +2,8 @@
 
 A simply CLI tool to create Iconfont and Icon Component from Sketch or SVGs.
 
+> forgive the author's poor English
+
 [简体中文](./README.md)
 
 ## Installation
@@ -38,7 +40,14 @@ If prompt permissions are insufficient, please use `$ sudo npm install -g iconfo
 - `-c`
   - optional, clear output directory before create
 
+### Create Vue/React/React-Native Components
+
+easily add `-m` parameter when create Iconfont to create components, the parameters should be divided by comma, eg:
+
+`iconfont-creator sketch ./iconfont.sketch -m react-native,react`
+
+React-Native and React Component will be created in `<output-path>/components`.
+
 ### TODO
 
-- add create Icon Component command
-- combine `sketch` and `svg` command
+- add create Iconfont from online css

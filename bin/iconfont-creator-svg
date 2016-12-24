@@ -23,6 +23,7 @@ program
   .usage('<svg-directory>')
   .option('-o, --output [output-path]', 'iconfont created path, default fonts in <svg-directory>')
   .option('-c, --clear', 'clear output directory before create')
+  .option('-m, --modules [components-divided-by-comma]', 'eg: -m vue,react-native,react. export Vue/React/React-Native Components, default all of them')
   .action(dir => {
     filesDir = dir ? path.resolve(CWD, dir) : null;
   })
@@ -42,6 +43,7 @@ const params = {
   src: filesDir,
   output: program.output ? path.resolve(CWD, program.output) : path.resolve(filesDir, 'fonts'),
   clear: program.clear,
+  modules: (program.modules || '').split(','),
 };
 
 utils.exportIconfont(params).then(() => {
