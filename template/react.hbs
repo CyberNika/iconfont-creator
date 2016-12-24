@@ -1,0 +1,15 @@
+import React from 'react';
+
+import './iconfont.css';
+
+const Icon = ({ type }) => {
+  return (
+    <i className={`iconfont icon-${type}`}></i>
+  );
+};
+
+Icon.defaultProps = {
+  type: React.PropTypes.string,
+};
+
+export default Icon;

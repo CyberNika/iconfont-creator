@@ -54,7 +54,7 @@ utils.exportFiles(params).then(() => {
   utils.exportIconfont({
     src: params.output,
     output: path.resolve(params.output, 'fonts'),
-    modules:(program.modules || '').split(','),
+    modules: (program.modules || '').split(','),
   }).then(() => {
     console.log('👌  exports iconfont succeed');
   });

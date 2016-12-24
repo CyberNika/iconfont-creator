@@ -1,0 +1,22 @@
+<template>
+  <i :class="className"></i>
+</template>
+
+<script>
+  import './iconfont.css';
+
+  export default {
+    name: 'Icon',
+    props: {
+      type: String,
+    },
+    computed: {
+      className() {
+        return `iconfont icon-${this.type}`;
+      },
+    }
+  };
+</script>
+
+<style>
+</style>
