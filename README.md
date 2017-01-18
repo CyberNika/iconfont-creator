@@ -19,13 +19,15 @@
 `$ iconfont-creator sketch <sketch-file-path> [-o [output-path]>] [-t [slices-or-artboards]] [-c]`
 
 - `<sketch-file-path>`
-  - 必选参数，Sketch 文件的路径
+  - 必填参数，Sketch 文件的路径
 - `-o [output-path]`
   - 选填参数，文件导出目录，默认为当前目录下的 `dist` 文件夹，默认会在当前目录下的 `components` 文件夹中生成 html 和 css 文件
 - `-t [slices-or-artboards]`
   - 选填参数（`slices` 或 `artboards`），依照切片或画板进行导出 SVG，默认为 `slices`
 - `-c`
   - 选填参数，是否在生成 Iconfont 前清空导出目录
+- `-m`
+  - 选填参数，是否生成组件，见[生成 Vue/React/React-Native 组件](#生成-vuereactreact-native-组件)
 
 ### 从 SVG 生成 Iconfont
 
@@ -37,8 +39,10 @@
   - 选填参数，文件导出目录，默认为 `<svg-directory>/fonts`，默认会在当前目录下的 `components` 文件夹中生成 html 和 css 文件
 - `-c`
   - 选填参数，是否在生成 Iconfont 前清空导出目录
+- `-m`
+  - 选填参数，是否生成组件，见[生成 Vue/React/React-Native 组件](#生成-vuereactreact-native-组件)
 
-### 生成 Vue/React/React-Native 组件
+### 生成 Vue/React/React Native 组件
 
 生成组件非常简单，只需在生成 Iconfont 时增加 `-m` 参数即可，参数值按逗号隔开，例如：
 
@@ -49,3 +53,4 @@
 ### TODO
 
 - 添加解析在线 Iconfont 的功能
+- 优化依赖

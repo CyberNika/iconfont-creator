@@ -28,6 +28,8 @@ If prompt permissions are insufficient, please use `$ sudo npm install -g iconfo
   - optional ( `slices` or `artboards` ), according to what for Sketch to export SVGs, `slices` (default) or `artboards`
 - `-c`
   - optional, clear output directory before create
+- `-m`
+  - optional, create Components, [here for more information](#create-vuereactreact-native-components)
 
 ### Create Iconfont from SVGs
 
@@ -39,6 +41,8 @@ If prompt permissions are insufficient, please use `$ sudo npm install -g iconfo
   - optional, iconfont created path, default `<svg-directory>/fonts`. preview html file and css file will be created in `components` under this path.
 - `-c`
   - optional, clear output directory before create
+- `-m`
+  - optional, create Components, [here for more information](#create-vuereactreact-native-components)
 
 ### Create Vue/React/React-Native Components
 
