@@ -1,6 +1,6 @@
 {
   "name": "iconfont-creator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simply CLI tool to create Iconfont from Sketch or SVGs.",
   "preferGlobal": true,
   "bin": {
@@ -20,10 +20,10 @@
   "pre-commit": [
     "lint"
   ],
-  "author": "flyow",
+  "author": "SnowCakeX",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flyow/iconfont-creator.git"
+    "url": "git+https://github.com/SnowCakeX/iconfont-creator.git"
   },
   "license": "MIT",
   "dependencies": {
